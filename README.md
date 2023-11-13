@@ -9,7 +9,8 @@ It spawns mitachurl with axe but without his axe which crashed his ai and he sta
 
 ## Installation
 Download latest release from [releases](https://github.com/Yoko-0/DPS-meter/releases).
-Place DPSMeter.jar into your \grasscutter\plugins folder and restart the server if it was already running
+
+Place `DPSMeter.jar` into your `\grasscutter\plugins` folder and restart the server if it was already running
 
 
 ## Usage
