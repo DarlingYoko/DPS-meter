@@ -1,0 +1,6 @@
+{
+  "name": "DPS meter",
+  "description": "Check your DPS easily.",
+  "mainClass": "xyz.kadr.yoko.DPSMeter",
+  "api": 2
+}
