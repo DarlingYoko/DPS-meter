@@ -1,7 +1,7 @@
 # DPS-meter
 Easy way to check your DPS in a certain anime game.
 
-Plugin to spawn some mobs around you. It will start a challenge that will be a test of your DPS and the results will be in chat.
+Plugin to spawn some mobs around you. It will start a challenge that will be check your DPS and send information to the chat.
 It spawns mitachurl with an axe but without his axe which crashes his AI and he stays AFK. All you need is to hit him one time.
 
 ###### *(found that randomly not sure that will work forever, open an issue if you have any idea how to improve that xD)*
