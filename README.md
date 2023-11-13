@@ -22,8 +22,9 @@ Place DPSMeter.jar into your \grasscutter\plugins folder and restart the server 
 
 `dps stop`
  - if you want to finish the challenge before time runs out
+
 ## Preview
-![text](gif)
+![preview.gif](preview.gif)
 
 ## Issues
 Welcome to [Issues](https://github.com/Yoko-0/DPS-meter/issues)
