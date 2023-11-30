@@ -92,6 +92,7 @@ public final class DPSCommand implements CommandHandler {
 
             // Define meta monster
             SceneGroup mobSG = new SceneGroup(); // Mobs scene group
+            mobSG.id = 50505051;
             Map<Integer, SceneMonster> metaMonsters = new HashMap<>(); // Meta monsters
             SceneMonster monster = new SceneMonster();
             metaMonsters.put(param.entityCount, monster);
