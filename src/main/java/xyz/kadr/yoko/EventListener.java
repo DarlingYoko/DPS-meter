@@ -9,7 +9,7 @@ public final class EventListener {
     public static void EntityDeathEvent(EntityDeathEvent event) {
         GameEntity monster = event.getEntity();
         var entType = event.getEntity().getEntityType();
-        if (EntityType.Monster.getValue() == entType.getValue()){
+        if (EntityType.Monster.getValue() == entType.getValue() && event.getEntity().getGroupId() == 50505051){
             DPSCommand.DPSChallenge.onMonsterDeath((EntityMonster) monster);
         }
 
