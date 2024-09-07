@@ -19,7 +19,7 @@ public class DPSTimeTrigger extends ChallengeTrigger {
         DungeonManager dungeonManager = challenge.getScene().getDungeonManager();
         if (dungeonManager == null || !dungeonManager.isTowerDungeon()) {
             int current = challenge.getScene().getSceneTimeSeconds();
-            if ((long)current - challenge.getStartedAt() > (long)challenge.getTimeLimit()) {
+            if ((long)current - challenge.getStartedAt() > (long)challenge.getTimeLimit() - 1) {
                 challenge.done();
             }
 

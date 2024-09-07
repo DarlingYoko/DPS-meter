@@ -28,6 +28,10 @@ public class DPSEntity extends EntityMonster{
 
     public void damage(float amount, int killerId, ElementType attackType) {
         this.dmg += amount;
+        
+        //Scale Total Damage to HP bar
+        
+        super.damage(this.getFightProperty(FightProperty.FIGHT_PROP_CUR_HP)-(float)(73060*Math.max(0,1-Math.log10(this.dmg/100+1)/8)+1), killerId, attackType);
     }
 
     public SceneEntityInfoOuterClass.SceneEntityInfo toProto() {

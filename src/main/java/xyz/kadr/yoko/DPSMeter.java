@@ -5,13 +5,15 @@ import emu.grasscutter.server.event.EventHandler;
 import emu.grasscutter.server.event.HandlerPriority;
 import emu.grasscutter.server.event.entity.EntityDeathEvent;
 
-import lombok.Getter;
-
 public final class DPSMeter extends Plugin {
 
-    @Getter private static DPSMeter instance;
+    private static DPSMeter instance;
 
-    @Override
+    public static DPSMeter getInstance() {
+		return instance;
+	}
+
+	@Override
     public void onLoad() {
         DPSMeter.instance = this;
 
