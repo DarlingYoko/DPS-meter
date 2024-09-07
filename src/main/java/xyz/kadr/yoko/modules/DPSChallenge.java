@@ -6,17 +6,28 @@ import emu.grasscutter.game.dungeons.challenge.trigger.ChallengeTrigger;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.world.Scene;
 import emu.grasscutter.scripts.data.SceneGroup;
-import lombok.Getter;
 
 import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
 
-@Getter
 public class DPSChallenge extends WorldChallenge {
 
     private final Player targetPlayer;
-    private final List<DPSEntity> activeMonsters;
+	private final List<DPSEntity> activeMonsters;
     private final ScheduledExecutorService executor;
+    
+    public Player getTargetPlayer() {
+		return targetPlayer;
+	}
+
+	public List<DPSEntity> getActiveMonsters() {
+		return activeMonsters;
+	}
+
+	public ScheduledExecutorService getExecutor() {
+		return executor;
+	}
+
 
     public DPSChallenge(
         Scene scene,
@@ -44,11 +55,12 @@ public class DPSChallenge extends WorldChallenge {
         float dmg = 0;
         for (DPSEntity entity : this.activeMonsters) {
             dmg += entity.dmg;
+            entity.getScene().killEntity(entity, 0);
         }
         this.activeMonsters.clear();
         String message = String.format(
-            "DPS check finished! Your result:\nTotal time - %d sec\nTotal DMG - %.0f",
-            getFinishedTime(), dmg
+            "DPS check finished! Your result:\nTotal time - %d sec\nTotal DMG - %.0f\nAverage DPS - %.2f",
+            getFinishedTime(), dmg, dmg/getFinishedTime()
         );
         CommandHandler.sendMessage(targetPlayer, message);
     }

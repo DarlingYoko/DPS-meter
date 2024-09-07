@@ -17,7 +17,6 @@ import static emu.grasscutter.command.CommandHelpers.parseIntParameters;
 
 import emu.grasscutter.server.packet.send.PacketAvatarFightPropUpdateNotify;
 import emu.grasscutter.server.packet.send.PacketAvatarLifeStateChangeNotify;
-import lombok.Setter;
 import xyz.kadr.yoko.modules.DPSChallenge;
 import xyz.kadr.yoko.modules.DPSEntity;
 import xyz.kadr.yoko.modules.DPSTimeTrigger;
@@ -159,7 +158,13 @@ public final class DPSCommand implements CommandHandler {
         }
     }
     private static class SpawnParameters {
-        @Setter public int entityCount = 1;
-        @Setter public int time = 60;
+        public int entityCount = 1;
+        public int time = 60;
+		public void setEntityCount(int entityCount) {
+			this.entityCount = entityCount;
+		}
+		public void setTime(int time) {
+			this.time = time;
+		}
     }
 }
